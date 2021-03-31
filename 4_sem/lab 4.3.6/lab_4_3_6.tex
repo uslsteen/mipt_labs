@@ -127,7 +127,7 @@
 
 Суть эксперимента по саморепродукции состоит в том, что дифрагированная на периодическом транспаранте (решетка, сетка) плоская монохроматическая волна лазера (лазерный пучок) воспроизводит изображение транспаранта без каких-либо оптических элементов.
 
-    \begin{figure}[h]
+    \begin{figure}[h!]
     \centering
     \includegraphics[width=15cm]{pics/fig1.png}
     \caption{Дифракция лучей на сетке и возникновение саморепродуцированного изображения}
@@ -136,7 +136,7 @@
 
 \section{Схема установки}
 
-    \begin{figure}[h]
+    \begin{figure}[h!]
     \centering
     \includegraphics[width=15cm]{pics/scheme.png}
     \caption{Схема лабораторной установки}
@@ -144,5 +144,64 @@
 \end{figure}
 
 \section{Ход работы}
+
+
+\subsection{Измерение периода решеток по их пространственному спектру}
+
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_4_436.tex}
+	\caption{Измерение расстояние между соседними дифр. макс. на экране}
+	\label{nu1}
+\end{table}
+
+
+Расстояние от кассеты до экрана $L = 124 \: cm$, $\lambda = 560 \: nm$.
+
+\begin{equation}
+    dsin(\theta_x) = m_x \lambda, \:\:\:\: d sin(\theta_y) = m_y \lambda     
+  \label{first}
+\end{equation}
+
+Полагая $sin(\theta) \backsimeq \theta \backsimeq \frac{x}{L}$, найдем с помощью формул (1) период каждой решетки.
+
+\[     d = \frac{\lambda L}{x}        \]
+
+  
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_3_436.tex}
+	\caption{Определение размера клеток $D$}
+	\label{nu1}
+\end{table}
+
+
+\subsection{Измерение периода решеток по изображению, увеличенного с помощью линзы}
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_1_436.tex}
+	\caption{Измерение номера дифракционной картины от координаты линзы}
+	\label{nu1}
+\end{table}
+
+\subsection{Исследование саморепродукции с помощью сеток}
+
+\subsection{Исследование миры}
+
+Измеряем расстояние между экраном и линзой - $L_3$, экраном и мирой - $L_4$.
+Получаем, что $L_3 = 126 cm$, $L_4 = 132 cm$.
+
+Ширина штриха миры равна $1 mm$.
+
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_2_436.tex}
+	\caption{Исследование решеток миры}
+	\label{nu1}
+\end{table}
 
 \end{document}
