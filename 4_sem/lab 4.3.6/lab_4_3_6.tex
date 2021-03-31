@@ -127,7 +127,7 @@
 
 Суть эксперимента по саморепродукции состоит в том, что дифрагированная на периодическом транспаранте (решетка, сетка) плоская монохроматическая волна лазера (лазерный пучок) воспроизводит изображение транспаранта без каких-либо оптических элементов.
 
-    \begin{figure}[h!]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=15cm]{pics/fig1.png}
     \caption{Дифракция лучей на сетке и возникновение саморепродуцированного изображения}
@@ -136,7 +136,7 @@
 
 \section{Схема установки}
 
-    \begin{figure}[h!]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=15cm]{pics/scheme.png}
     \caption{Схема лабораторной установки}
@@ -168,8 +168,14 @@
 
 \[     d = \frac{\lambda L}{x}        \]
 
-  
+Измерения и результаты вычисления периоды дифракционной решетки занесены в таблицу 1.
 
+
+
+\subsection{Измерение периода решеток по изображению, увеличенного с помощью линзы}
+
+Найдем период решетки другим способом.
+ 
 \begin{table}[h!]
 	\centering
 	\input{tables/table_3_436.tex}
@@ -178,7 +184,22 @@
 \end{table}
 
 
-\subsection{Измерение периода решеток по изображению, увеличенного с помощью линзы}
+Измеренные расстояния: между сеткой и экраном - $a' = 131 \: cm \rightarrow$ между линзой и сеткой -  $a = a' - b = 6 \: cm$ , между линзой и экраном - $ b= 125\:cm$.
+
+\[    d = \frac{a}{b} \cdot D   \]
+
+Таким образом по формуле выше находим период решетки и записываем результат в таблицу 2. 
+
+
+\subsection{Исследование саморепродукции с помощью сеток}
+
+Исследуем саморепродукцию.
+Находим координаты $z_n$ плоскостей саморепродукции, строим график. По коэффициенту наклона прямой графика определим период решетки по формуле:
+
+\begin{equation}
+  d_i = \sqrt{\frac{k_i\lambda}{2}}
+\end{equation}
+
 
 \begin{table}[h!]
 	\centering
@@ -187,7 +208,47 @@
 	\label{nu1}
 \end{table}
 
-\subsection{Исследование саморепродукции с помощью сеток}
+\begin{table}[h!]
+	\centering
+	\input{tables/table_1_436_res.tex}
+	\caption{Резульаты вычисления периода дифракционных решеток}
+	\label{nu1}
+\end{table}
+
+Измерения и полученные значения сводим в таблицу 3. 
+Затем строим графики $z = f(n)$.
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_1.png}
+  \caption{График $z_1 = f(n)$}
+  \label{}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_2.png}
+  \caption{График $z_2 = f(n)$}
+  \label{}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_3.png}
+  \caption{График $z_3 = f(n)$}
+  \label{}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_4.png}
+  \caption{График $z_4 = f(n)$}
+  \label{}
+\end{figure}
+
 
 \subsection{Исследование миры}
 
@@ -195,6 +256,8 @@
 Получаем, что $L_3 = 126 cm$, $L_4 = 132 cm$.
 
 Ширина штриха миры равна $1 mm$.
+
+
 
 
 \begin{table}[h!]
