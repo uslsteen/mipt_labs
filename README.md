@@ -1,5 +1,5 @@
 # Mipt_labs
-### This repository created by Anton Shurygin [uslsteen](https://github.com/uslsteen) and Anton Orlovsky
+### This repository created by Anton Shurygin ([uslsteen](https://github.com/uslsteen)) and Anton Orlovsky
 
 If you happen to be on this repository, you either:
 1) Want to roll a lab.
