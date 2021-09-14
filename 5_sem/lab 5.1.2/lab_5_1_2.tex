@@ -83,7 +83,7 @@
   \hfill \break
   \hfill \break
   \hfill \break
-  \Huge{Дифракция света.}\\
+  \Huge{Исследование эффекта Комптона.}\\
 \end{center}
 
 \hfill \break
@@ -133,7 +133,7 @@
 
 Отметим, что всё вышесказанное применительно в том случае, когда электрон свободный, что справедливо для лёгких атомов, где энергия связи не больше нескольких килоэлектрон-вольт, а чаще всего меньше, и $\gamma$-квантов с энергией в несколько десятков-сотен килоэлектрон-вольт.
 
-\section{Описание установки}
+\section{Экспериментальная установка}
 
 
 %\begin{figure}[h]
@@ -165,9 +165,28 @@
 Устанавливая сцинтилляционный счётчик под разными углами $\theta$, произведём измерения, каждое примерно по десять минут, отмечая, какому каналу соответствует фотопик при каждом значении угла. Картина, наблюдаемая на дисплее компьютера, представлена на Рис. 3
 Результаты измерений представлены в Таблице 1, как отмечалось выше, погрешнсть измерения канала -- 1\%, так как она для всех измерений больше, чем половина расстояния до соседнего возможного пика, учитывалась только она, погрешность измерения угла $\theta$ берём ценой деления лимба $\sigma_\theta = 2^\circ$.
 
+\begin{table}[h!]
+	\centering
+	\input{tables/table2.tex}
+	\caption{}
+	\label{tb1}
+\end{table}  
 
+\begin{table}[h!]
+	\centering
+	\input{tables/table3.tex}
+	\caption{}
+	\label{tb1}
+\end{table}
 
 По этим данным постоим график зависимости $1/N(\theta)$ от $1-\cos \theta$ (Рис. 4). Здесь погрешности считали по формулам
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1.0\linewidth]{pics/graph1.png}
+  \caption{Зависимость }
+  \label{}
+\end{figure}
 
 \[\begin{array}{l}
 \sigma_{1/N} = \dfrac{\sigma_N}{N^2},\\
@@ -182,25 +201,23 @@ A = \dfrac{\langle xy \rangle - \langle x \rangle \langle y \rangle}{\langle x^2
 \dfrac{1}{N(0)} = \langle y \rangle - A \langle x \rangle, & \sigma_{1/N(0)} = \sigma_A \sqrt{\langle x^2\rangle},\\
 \end{array}\]
 
-где $\langle \cdot \rangle$ обозначает среднее значение, $n = 13$ -- число опытов.
-
 
 Из аппроксимации получим <<наилучшие>> значения каналов для $\theta = 0^\circ$ и $\theta = 90^\circ$:
 
-%\[\begin{array}{l}
-%N_{\text{наил}}(0) = \dfrac{1}{\frac{1}{N(0)}} = 920 \pm 20,\\[12pt]
-%N_{\text{наил}}(90) = \dfrac{1}{\frac{1}{N(0)}+A} = 384 \pm 7,\\
-%\end{array}
-%%\]
+\[\begin{array}{l}
+N_{\text{best}}(0) = \dfrac{1}{\frac{1}{N(0)}} = 920 \pm 20,\\[12pt]
+N_{\text{best}}(90) = \dfrac{1}{\frac{1}{N(0)}+A} = 384 \pm 7,\\
+\end{array}
+\]
 
 где погрешности считались по формулам
  
-%\[
-%\begin{array}{l}
-%\sigma_{N_{\text{наил}}(0)} = \dfrac{\sigma_{\frac{1}{N(0)}}}{(\frac{1}{N(0)})^2},\\[14pt]
-%\sigma_{N_{\text{наил}}(90)} = \dfrac{\sigma_{\frac{1}{N(0)}} + \sigma_{A}}{(\frac{1}{N(0)}+A)^2} \\
-%\end{array}
-%\]
+\[
+\begin{array}{l}
+\sigma_{N_{\text{best}}(0)} = \dfrac{\sigma_{\frac{1}{N(0)}}}{(\frac{1}{N(0)})^2},\\[14pt]
+\sigma_{N_{\text{best}}(90)} = \dfrac{\sigma_{\frac{1}{N(0)}} + \sigma_{A}}{(\frac{1}{N(0)}+A)^2} \\
+\end{array}
+\]
 
 Наконец, по формуле \eqref{2} (для $N(0)$ и $N(90)$ брались наилучшие значения) получим энергию покоя электрона
     
