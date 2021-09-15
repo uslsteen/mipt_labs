@@ -1,0 +1,224 @@
+\documentclass[15pt,a5paper,reqno]{article}
+\usepackage{hyperref}
+\usepackage[warn]{mathtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amssymb, amsmath, multicol}
+\usepackage{graphicx}
+\usepackage[shortcuts,cyremdash]{extdash}
+\usepackage{wrapfig}
+\usepackage{floatflt}
+\usepackage{lipsum}
+\usepackage{verbatim}
+\usepackage{concmath}
+\usepackage{euler}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{subfiles}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{import}
+
+\DeclareMathOperator{\sign}{sign}
+
+\RequirePackage[ left     = 1.5cm,
+  right    = 1.5cm,
+  top      = 2.0cm,
+  bottom   = 1.25cm,
+  includefoot,
+  footskip = 1.25cm ]{geometry}
+\setlength    {\parskip}        { .5em plus .15em minus .08em }
+%\setlength    {\parindent}      { .0em }
+\renewcommand {\baselinestretch}{ 1.07 }
+
+\fancyhf{}
+
+\renewcommand{\footrulewidth}{ .0em }
+\fancyfoot[C]{\texttt{\textemdash~\thepage~\textemdash}}
+\fancyhead[R]{\hfilШурыгин}
+
+\makeatletter
+\patchcmd\l@section{%
+  \nobreak\hfil\nobreak
+}{%
+  \nobreak
+  \leaders\hbox{%
+    $\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$%
+  }%
+  \hfill
+  \nobreak
+}{}{\errmessage{\noexpand\l@section could not be patched}}
+\makeatother
+\parindent = 1cm % отступ при красной строке⏎
+\pagestyle{fancy}    
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\when}[2]{
+  \left. #1 \right|_{#2} \hspace
+}
+\renewcommand{\kappa}{\varkappa}
+\RequirePackage{caption2}
+\renewcommand\captionlabeldelim{}
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+
+\DeclareSymbolFont{T2Aletters}{T2A}{cmr}{m}{it}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+% Цвета для гиперссылок
+\definecolor{linkcolor}{HTML}{000000} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+ 
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+
+%\setcounter{secnum[utf8x]depth}{0}
+
+\begin{document}
+
+% НАЧАЛО ТИТУЛЬНОГО ЛИСТА
+\begin{center}
+  {\small ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ\\ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ\\ МОСКОВСКИЙ ФИЗИКО-ТЕХНИЧЕСКИЙ ИНСТИТУТ\\ (НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ)\\ ФИЗТЕХ-ШКОЛА РАДИОТЕХНИКИ И КИБЕРНЕТИКИ}\\
+  \hfill \break
+  \hfill \break
+  \hfill \break
+  \Huge{Исследование энергетич. спектра $\beta$ -- частиц, определение их макс. энерг. магнитным спектрометром}\\
+\end{center}
+
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+
+\begin{flushright}
+  \normalsize{Работу выполнил:}\\
+  \normalsize{\textbf{Шурыгин Антон Алексеевич, группа Б01-909}}\\
+\end{flushright}
+
+\begin{center}
+  \normalsize{\textbf{Долгопрудный, 2021}}
+\end{center}
+
+
+\thispagestyle{empty} % выключаем отображение номера для этой страницы
+
+% КОНЕЦ ТИТУЛЬНОГО ЛИСТА
+
+\newpage
+\thispagestyle{plain}
+\tableofcontents
+\thispagestyle{plain}
+\newpage
+
+
+\paragraph{Цель работы:}
+Исследование энергетического спектра $\beta$-частиц при распаде ядер $^{137}$Cs и определение их максимальной энергии при помощи магнитного спектрометра. 
+
+\paragraph
+{В работе используются:}
+\begin{itemize}
+    \item Магнитный спектрометр с <<короткой линзой>>
+    \item Высоковольтный и низковольтный выпрямители
+    \item Форвакуумный насос и вакуумметр
+    \item ЭВМ
+\end{itemize}
+
+\section{Теоретические положения}
+
+\textbf{Бета-распад} --  это самопроизвольное превращение ядер, при котором их массовое число не изменяется, а заряд изменяется на единицу. В данной работе мы будем иметь дело с электронным распадом:
+		\begin{equation}
+		    _{Z}^{A}X \rightarrow _{Z+1}^{A}X + e^{-} + \widetilde{\nu}
+		\end{equation}
+		Освобождающаяся в результате распада энергия делится между исходным ядром, электроном и нейтрино. При этом доля энергии, уносимая ядром крайне мала, так что вся энергия делится между нейтрино и электроном. Поэтому электроны могут иметь любую энергию от нулевой до некоторой максимальной энергии, высвобождаемой при распаде.
+		
+		Вероятность $\omega$ того, что электрон вылетит с импульсом $^3p$, а нейтрино с импульсом $^3k$ равна произведению этих дифференциалов, но мы должны учесть также закон сохранения энергии.
+		\begin{equation}
+		    E_e - E - ck = 0
+		\end{equation}
+		Энергия электрона связана с импульсом обычным образом:
+		\begin{equation}
+		    E = c\sqrt{p^2 + m^2c^2} -mc^2
+		\end{equation}
+		Таким образом, вероятность $\omega$ принимает вид:
+		\begin{equation}
+		    \omega = D\delta(E_e-E-ck)^3p^3k = D\delta(E_e-E-ck)p^2 pk^2 k\Omega_e\Omega_{\widetilde{\nu}}
+		\end{equation}
+		D можно считать с хорошей точностью константой. В этом случае можно проинтегрировать по всем углам и по абсолютному значению импульса нейтрино. В этом случае $\delta$-функция исчезнет, а $ck$ всюду заменится на $E_e-E$. После умножения на полное число распадов выражение примет вид:
+		\begin{equation}
+		     N = \frac{16\pi^2N_0}{c^2} D p^2\left(E_e-E\right)^2 p
+		\end{equation}
+		В нерелятивистском случае выражение упрощается и принимает вид:
+		\begin{equation}
+			\frac{ N}{ E} \simeq \sqrt{E}(E_e - E)^2
+		\end{equation}
+		
+		Дочерние ядра, возникающие в результате $\beta$-распада, нередко оказываются возбуждёнными. Возбуждённые ядра отдают свою энергию либо излучая гамма-квант, либо передавая избыток энергии одному из электронов с внутренних оболочек атома (обычно $K$ или $L$). Последние электроны имеют строго определённую энергию и называются \textit{конверсионными}. Ширина монохроматической линии, соответствующая конверсионным электронам, определяет разрешающую силу спектрометра.
+
+\section{Экспериментальная установка}
+
+    \begin{figure}[h]
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{pics/lens_5_4_2.png}
+\caption{Схема $\beta$-спектрометра с короткой магнитной линзой} %% подпись к рисунку\label{ris:experimoriginal} %% метка рисунка для ссылки на него
+\end{minipage}
+\hfill 
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{pics/stff_5_4_2.png}
+\caption{Блок-схема установки для изучения $\beta$-спектра}
+\label{ris:experimcoded}
+\end{minipage}
+\end{center}
+\end{figure}
+
+Энергию частиц определяют с помощью $\beta$-спектрометров. В работе используется магнитный спектрометр с <<короткой>> линзой, сцинтиллятором и ФЭУ. Как показывает расчет, для заряженных частиц тонкая катушка эквивалентна линзе:
+		\begin{equation}
+			\frac{1}{f} \simeq \frac{I^2}{p_e^2}
+		\end{equation}
+	При заданной силе тока на входное окно счетчика собираются электроны с определенным импульсом. Импульс сфокусированных электронов пропорционален силе тока, коэффициент пропорциональности определяется по какой-либо известной конверсионной линии. \par
+	Давление в спектрометре поддерживается на уровне около 0,1 Торр и измеряется термопарным вакуумметром. Откачка осуществляется форвакуумным насосом. Высокое напряжение на ФЭУ подаётся от стабилизированного выпрямителя.
+
+\section{Выполнение работы и обработка данных}
+
+\begin{enumerate}
+    \item Откачаем воздух из полости спектрометра. включим формирователь импульсов и питание магнитной линзы.
+    \item Изменяя ток линзы через 0,2 А, проведём измерение зависимости интенсивности потока падающих $\beta$-частиц от силы тока, время накопления - 100 секунд. Более подробно пропишем конверсионный спектр. Результаты измерения занесём в таблицу 1.
+    \item Проведём измерение фона - фонового излучения нет.
+    \item Прокалибруем спектрометр с учётом того, что $p_{conv}c = $1013.5 кэВ ($p_{conv} = 634 $кэВ у $^{137}$Cs). Определим значения энергии, импульса и величину $\frac{\sqrt{N(p)}}{p^{3/2}}$ для построения графика Ферми-Кюри.
+    \item Построим графики зависимости интенсивности потока частиц от силы тока (рис. 3) и график Ферми-Кюри (рис. 4)
+    
+    \item По графику Ферми-Кюри определим максимальную энергию $\beta$-частиц в спектре, $E_{max} = $ 615,31 кэВ
+
+  
+    
+\begin{table}[h!]
+  \centering
+  \input{tables/table_5_4_2.tex}
+  \caption{: данные для графика}
+\label{tb2}
+\end{table}
+
+
+\begin{figure}[h!]
+			\centering
+			\includegraphics[width=\linewidth]{pics/lab_542_1.png}
+			\caption{Зависимость интенсивности потока частиц от силы тока в магнитной линзе}
+		\end{figure}
+		
+\begin{figure}[h!]
+			\centering
+			\includegraphics[width=\linewidth]{pics/lab_542_2.png}
+			\caption{График Ферми-Кюри}
+		\end{figure}
+		
+\end{enumerate}
+
+\section{Вывод}
+	В ходе работы было исследовано явление $\beta$-распада $^{137}$Cs. В спектре $\beta$-частиц наблюдаются две области: электроны, рождённые в паре с антинейтрино (приближаемая по Лоренцу кривая на графике спектра) и конверсионные электроны, испускаемые в результате перехода ядра на более низкий энергетический уровень (монохроматическая линия, строго определённое значение энергии 634 кэВ). \par
+	Также с помощью графика Ферми-Кюри ($\frac{\sqrt{N}}{p^{3/2}} = f(T_{kin})$) было определено максимальное значение энергии $\beta$-частиц в спектре: $E_{max} = $ 615,31 кэВ
+
+
+\end{document}
