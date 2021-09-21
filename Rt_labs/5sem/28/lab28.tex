@@ -1,0 +1,207 @@
+\documentclass[15pt,a5paper,reqno]{article}
+\usepackage{hyperref}
+\usepackage[warn]{mathtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amssymb, amsmath, multicol}
+\usepackage{graphicx}
+\usepackage[shortcuts,cyremdash]{extdash}
+\usepackage{wrapfig}
+\usepackage{floatflt}
+\usepackage{lipsum}
+\usepackage{verbatim}
+\usepackage{concmath}
+\usepackage{euler}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{subfiles}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{import}
+
+\DeclareMathOperator{\sign}{sign}
+
+\RequirePackage[ left     = 1.5cm,
+  right    = 1.5cm,
+  top      = 2.0cm,
+  bottom   = 1.25cm,
+  includefoot,
+  footskip = 1.25cm ]{geometry}
+\setlength    {\parskip}        { .5em plus .15em minus .08em }
+%\setlength    {\parindent}      { .0em }
+\renewcommand {\baselinestretch}{ 1.07 }
+
+\fancyhf{}
+
+\renewcommand{\footrulewidth}{ .0em }
+\fancyfoot[C]{\texttt{\textemdash~\thepage~\textemdash}}
+\fancyhead[R]{\hfilДержавин, Хайдари, Шурыгин}
+
+\makeatletter
+\patchcmd\l@section{%
+  \nobreak\hfil\nobreak
+}{%
+  \nobreak
+  \leaders\hbox{%
+    $\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$%
+  }%
+  \hfill
+  \nobreak
+}{}{\errmessage{\noexpand\l@section could not be patched}}
+\makeatother
+\parindent = 1cm % отступ при красной строке⏎
+\pagestyle{fancy}    
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\when}[2]{
+  \left. #1 \right|_{#2} \hspace
+}
+\renewcommand{\kappa}{\varkappa}
+\RequirePackage{caption2}
+\renewcommand\captionlabeldelim{}
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+
+\DeclareSymbolFont{T2Aletters}{T2A}{cmr}{m}{it}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+% Цвета для гиперссылок
+\definecolor{linkcolor}{HTML}{000000} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+ 
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+
+%\setcounter{secnum[utf8x]depth}{0}
+
+\begin{document}
+
+% НАЧАЛО ТИТУЛЬНОГО ЛИСТА
+\begin{center}
+  {\small ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ\\ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ\\ МОСКОВСКИЙ ФИЗИКО-ТЕХНИЧЕСКИЙ ИНСТИТУТ\\ (НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ)\\ ФИЗТЕХ-ШКОЛА РАДИОТЕХНИКИ И КИБЕРНЕТИКИ}\\
+  \hfill \break
+  \hfill \break
+  \hfill \break
+  \Huge{Усилитель на биполярных транзисторах}\\
+\end{center}
+
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+
+\begin{flushright}
+  \normalsize{Работу выполнили:}\\
+  \normalsize{\textbf{Державин Андрей \\Хайдари Фарид \\ Шурыгин Антон \\группа Б01-909}}\\
+\end{flushright}
+
+\begin{center}
+  \normalsize{\textbf{Долгопрудный, 2021}}
+\end{center}
+
+
+\thispagestyle{empty} % выключаем отображение номера для этой страницы
+
+% КОНЕЦ ТИТУЛЬНОГО ЛИСТА
+
+\newpage
+\thispagestyle{plain}
+\tableofcontents
+\thispagestyle{plain}
+\newpage
+
+\section{Основные формулы}
+
+\[ K_u = \frac{U_{вых}}{U_{вх}} \text{\:\:\:\:} K_e = \frac{U_{вых}}{\varepsilon_{ген}} \]
+
+\[ R_{вх} = \frac{U_{вх}}{I_{вх}} = \frac{U_{вх} R_И}{ \varepsilon_{ген} - U_{вх}} \]
+
+\section{Нестабилизированный усилитель}
+
+\subsection{}
+
+Берём радиотехнические элементы:
+
+\begin{itemize}
+  \item $R_k = 2,4 \text{ кОм}$
+  \item $R_b = 540 \text{ кОм}$
+  \item $R_{вх} = R_k$
+\end{itemize}
+
+Измеряем, получаем: 
+
+\[ U_{кэ} \approx 5 \text{ B, } U_{бэ} \approx 0,64 \text{ B} \Rightarrow  \]
+
+\[ I_{к} = \frac{U_{кэ}}{R_k} \approx 2 \text{ мА, } I_{б} = \frac{U_{вх} - U_{бэ}}{R_b} \approx  \text{17,3 мкА} \Rightarrow  \]
+
+\[ h_{21e} \approx 115 \]
+
+\subsection{}
+
+Добавлем к уже имеющимся элементам:
+
+\begin{itemize}
+
+  \item $C = 0,47 \text{ мкФ}$
+  \item $R_{и} = R_k$
+\end{itemize}
+
+Для определения $f_н$ фиксируем уменьшение $U_{вых}$ в $\sqrt{2}$ раз при переходе из области средних частот ($\approx$ 1 кГЦ) в область низких частот.
+По аналогии измеряем $f_в$ при переходе из средних в высокие.
+ 
+Результаты всех расчетов и измерений вносим в таблицу \ref{tb2}.
+
+\section{Стабилизированный усилитель}
+
+\subsection{}
+
+В данном пункте считаем $h_{21э} \approx 100$. Берём радиотехнические элементы:
+
+\begin{itemize}
+  \item $R_k = 2,4 \text{ кОм}$
+  \item $R_1 = 39 \text{ кОм}$
+  \item $R_2 = 8,2 \text{ кОм}$
+  \item $R_{и} = R_k$
+  \item $R_Э = 540 \text{ Ом}$
+\end{itemize}
+
+Измеряем относительно земли напряжения, получаем:
+
+\[ U_Б \approx 0,65 \text{ B \:\:} U_Э \approx 1,15 \text{ B \:\:} U_K \approx 5,75 \text{ B}  \]
+
+Измеряем оставшиеся величины, заносим в таблицу. 
+
+
+\[ \]
+
+\subsection{}
+
+\[ r_э = \frac{U_T}{I_Э} \approx 12 \text{ Ом} \]
+
+В случае $C_Э = 0$ выполняется соотношение:
+
+\[ K_u \approx \frac{R_k}{R_Э + r_э}\]
+
+\[  h_{11э} \approx (h_{21э} + 1)r_э \approx 1200 \]
+
+\[ R_Б = R_1 || R_2 \approx 6,7   \text{ кОм}\]
+
+\[  R_{вх} = R_{Б} || (h_{11э} + R_Э (h_{21э} + 1)) \Rightarrow  \]
+
+\[R_{вх} = \frac{R_{Б} \cdot (h_{11э} + R_Э (h_{21э} + 1)}{R_{Б} + (h_{11э} + R_Э (h_{21э} + 1)} \approx  6,8 \text{ кОм} \] 
+
+Результаты всех расчетов и измерений вносим в таблицу \ref{tb2}.
+
+\section{Результаты измерений}
+
+\begin{table}[h!]
+  \centering
+  \input{tables/28_table.tex}
+  \caption{}
+\label{tb2}
+\end{table}
+
+\end{document}
