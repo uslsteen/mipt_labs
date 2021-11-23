@@ -4,25 +4,18 @@ cmake-build-debug/
 .idea/
 
 # Игнорирование исполняемых файлов
-.out
-.txt
+*.out
+*.txt
 
-.aux
-.fdb_latexmk
-.log
-.fls
-.toc
-
-.py
 
 # Игнорирование архивов
-.gz
+*.gz
 
 # Latex - ignore
-.out
-.toc
-.fls
-.log
-.aux
-.fdb_latexmk
-.gz
+*.out
+*.toc
+*.fls
+*.log
+*.aux
+*.fdb_latexmk
+*.gz
