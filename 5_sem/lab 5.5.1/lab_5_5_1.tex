@@ -1,0 +1,215 @@
+\input{include/preambule.tex}
+
+\begin{document}
+
+	\input{include/title.tex}
+
+
+	\textbf{Цель работы:} c помощью сцинтилляционного счетки измерить линейные коэффициенты ослабления потока $\gamma$-лучей в свинце, железе и алюминии; по их велечине определить энергию $\gamma$-квантов.
+
+	\input{include/theory.tex}
+
+
+	\section{Экспериментальная установка}
+	Схема установки, используемой в работе, показана на рис. \ref{scheme}. Свинцовый коллиматор выделяет узкий почти параллельный пучок $\gamma$-квантов, проходящий через набор поглотителей П и регистрируемый сцинтилляционным счетчиком). Сигналы от счетчика усиливаются и регистрируются пересчетным прибором ПП. Высоковольтный выпрямитель ВВ обеспечивает питание сцинтилляционного счетчика.
+
+При недостаточно хорошей геометрии в результаты опытов могут
+вкрасться существенные погрешности. В реальных установках всегда имеется конечная вероятность того, что $\gamma$-квант провзаимодействует в
+поглотителе несколько раз до того, как попадет в детектор. Чтобы уменьшить число таких случаев, в данной работе сцинтилляционный счетчик расположен на большом расстоянии от источника $\gamma$-квантов, а поглотители имеют небольшие
+размеры. Их следует устанавливать за коллиматорной щелью на некотором расстоянии друг от друга, чтобы испытавшие комптоновское
+рассеяние и выбывшие из прямого потока кванты с меньшей вероятностью могли в него вернуться.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/scheme.png}
+		\caption{Блок-схема установки, используемой для измерения коэффициентов ослабления потока $\gamma$-лучей.}
+		\label{scheme}
+	\end{figure} 
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/part_disp.png}
+		\caption{Схема рассеяния $\gamma$-квантов в поглотителе.}
+		\label{}
+	\end{figure}  
+
+	\newpage
+	
+	\section{Ход работы}
+
+	В условиях эксперимента необходимо учитывать фон, поэтому
+	\begin{equation}
+		N_0 = n_0 - n_\text{фон}, \ N_i = n_i - n_\text{фон}.
+	\end{equation}
+	
+	\begin{table}[h!]
+		\centering
+		\input{tables/table0.tex}
+		\caption{: измерения фона и числа частиц $N_0$ без поглотитела}
+	\label{tb0}
+	\end{table}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table0_5.tex}
+		\caption{: измерения числа частиц для алюминия}
+	\label{tb0_5}
+	\end{table}
+
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table1_5.tex}
+		\caption{: измерения числа частиц для свинца}
+	\label{tb1_5}
+	\end{table}
+
+	
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table2_5.tex}
+		\caption{: измерения числа частиц для железа}
+	\label{tb2_5}
+	\end{table}
+
+	\newpage
+	\section{Обработка результатов}
+
+	\textbf{Погрешности}
+	При повторном проведении опыта измренения количества частиц для фиксирванной длины замечаем, что измеренная величина отличается не более чем на 3\% от среднечего значения. 
+	На самом деле среднее значение отклонения от среднего $\sim$ 0,5 $\div$ 1,5 \%. Но беру с запасом веррхнюю границу. Значит, 
+	
+	\[ \frac{\sigma_N}{N} \approx \frac{\sigma_{N_{0}}}{N_{0}} = 0,03 \]
+
+	\[	\sigma_{\ln\left(\frac{N_0}{N}\right)} = \frac{1}{\frac{N_0}{N}} \sigma_{N_0/N} = \frac{1}{\frac{N_0}{N}} \cdot \frac{N_0}{N} \cdot \sqrt{\left(\frac{\sigma_{N_0}}{N_0}\right)^2+\left(\frac{\sigma_{N}}{N}\right)^2} \]
+
+	\[  \sigma_{\ln\left(\frac{N_0}{N}\right)} \approx = 0,042 \]
+
+
+	Погрешность измерения длины поглотителя - это просто погрешность штангециркуля, т.к. каждый измерения происходили после каждого добавления нового слоя.
+	Таким образом, $\sigma_d = 0,01 см$
+		
+	
+	Обрабтаем полученные во время работы данные:
+
+	\begin{itemize}
+		\item определим среднее число частиц 3-х измерений для фиксированной длины
+		\item определим число частиц, детектируемое за 1 секунду
+		\item учтем рассчитанную погрешность
+		\item построим графики для свинца, железа, алюминия
+	\end{itemize}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table1.tex}
+		\caption{: обработанные данные для алюминия}
+	\label{tb1}
+	\end{table}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table2.tex}
+		\caption{: обработанные данные для свинца}
+	\label{tb2}
+	\end{table}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table3.tex}
+		\caption{: обработанные данные для железа}
+	\label{tb3}
+	\end{table}	
+	
+	
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table4.tex}
+		\caption{: данные для графика, алюминий}
+	\label{tb4}
+	\end{table}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table5.tex}
+		\caption{: данные для графика, свинец}
+	\label{tb5}
+	\end{table}
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table6.tex}
+		\caption{: данные для графика, железо}
+	\label{tb6}
+	\end{table}
+
+	Учтем погрешность МНК:
+
+	\[ \sigma_{\mu} = \dfrac{1}{\sqrt{n}}\sqrt{\dfrac{\langle y^2 \rangle - \langle y \rangle^2}{\langle x^2 \rangle - \langle x \rangle^2} - \mu^{2}} \]
+
+	Из построенных графиков по МНК получаем, что:
+
+	\begin{table}[h!]
+		\centering
+		\input{tables/table7.tex}
+		\caption{: результаты}
+	\label{tb6}
+	\end{table}
+
+	Из таблицы 4 приложения V получаем соответствующую среднюю энерги $\gamma$ - лучей, испускаемых истчочником:
+
+	\begin{itemize}
+		\item $\mu_{Al} = 0,234 \pm 0,0038 \Rightarrow E_{\gamma} \approx 0,4 \div 0,5 \text{ МЭв} $
+		\item $\mu_{Pb} = 1,23 \pm 0,053 \Rightarrow E_{\gamma} \approx 0,6 \text{ МЭв} $
+		\item $\mu_{Fe} = 0,234 \pm 0,0038 \rightarrow E_{\gamma} \approx 0,4 \div 0,5 \text{ МЭв} $
+	\end{itemize}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{pics/al.png}
+		\caption{ : зависимость для алюминия}
+		\label{al}
+	\end{figure}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{pics/fr.png}
+		\caption{ : зависимость для железа}
+		\label{fr}
+	\end{figure}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{pics/pb.png}
+		\caption{ : зависимость для свинца}
+		\label{pb}
+	\end{figure}
+
+	\newpage
+
+	\section{Вывод}
+	В настоящей лабораторной работе с помощью сцинтилляционного счетчика были измерены линейные коэффициенты ослабления $\mu$ потока $\gamma$-лучей в свинце, железе, алюминии. 
+	Среднюю энергию излучения, испускаемого источником, определили по справочной таблице, приведенной в приложении лабораторного практикума по общей физике.
+
+	Приведу результаты еще раз дам небольшой анализ.
+
+	\begin{itemize}
+		\item $\mu_{Al} = 0,234 \pm 0,0038 \Rightarrow E_{\gamma} \approx 0,4 \div 0,5 \text{ МЭв} $
+		\item $\mu_{Pb} = 1,23 \pm 0,053 \Rightarrow E_{\gamma} \approx 0,6 \text{ МЭв} $
+		\item $\mu_{Fe} = 0,234 \pm 0,0038 \rightarrow E_{\gamma} \approx 0,4 \div 0,5 \text{ МЭв} $
+	\end{itemize}
+
+	\begin{enumerate}
+		\item значения линейных коэффициентов, а также погрешности получились адекватного порядка.
+		\item средняя энергия испускаемых квантов получилась \textbf{для каждого вещества} приблизительно порядка $\approx 0,5 \text{ МЭв}$
+	\end{enumerate}
+
+	Учитывая два пункта, приведенных выше, можно считать, что эксперимент проведён успешно и полученные значения в пределах погрешности соответствуют реальным значениям. 
+
+\end{document}
+
+
+
+
+

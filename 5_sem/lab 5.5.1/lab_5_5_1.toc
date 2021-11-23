@@ -1,0 +1,10 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Теоретические положения}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Фотоэлектрическое поглощение.}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Комптоновское рассеяние.}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Образование пар}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Полный коэффициент ослабления $\gamma $-лучей}{7}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Экспериментальная установка}{8}{section.2}%
+\contentsline {section}{\numberline {3}Ход работы}{10}{section.3}%
+\contentsline {section}{\numberline {4}Обработка результатов}{11}{section.4}%
+\contentsline {section}{\numberline {5}Вывод}{15}{section.5}%
