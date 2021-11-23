@@ -17,3 +17,12 @@ cmake-build-debug/
 
 # Игнорирование архивов
 .gz
+
+# Latex - ignore
+.out
+.toc
+.fls
+.log
+.aux
+.fdb_latexmk
+.gz
