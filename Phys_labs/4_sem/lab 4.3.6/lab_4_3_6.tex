@@ -1,0 +1,147 @@
+\input{include/preambule.tex}
+
+\begin{document}
+  
+\input{include/title.tex}
+
+\textbf{Цель работы:}
+Изучение явления саморепродукции и применение его к измерению параметров периодических структур.
+
+\textbf{Оборудование:} лазер,кассета с сетками, мира, короткофокусная линза с микрометрическим винтом, экран, линейка.
+
+\input{include/theory.tex}
+
+\section{Схема установки}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{pics/scheme.png}
+    \caption{Схема лабораторной установки}
+    \label{fig:vac}
+\end{figure}
+
+\section{Ход работы}
+
+
+\subsection{Измерение периода решеток по их пространственному спектру}
+
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_4_436.tex}
+	\caption{Измерение расстояние между соседними дифр. макс. на экране}
+	\label{nu1}
+\end{table}
+
+
+Расстояние от кассеты до экрана $L = 124 \: cm$, $\lambda = 560 \: nm$.
+
+\begin{equation}
+    dsin(\theta_x) = m_x \lambda, \:\:\:\: d sin(\theta_y) = m_y \lambda     
+  \label{first}
+\end{equation}
+
+Полагая $sin(\theta) \backsimeq \theta \backsimeq \frac{x}{L}$, найдем с помощью формул (1) период каждой решетки.
+
+\[     d = \frac{\lambda L}{x}        \]
+
+Измерения и результаты вычисления периоды дифракционной решетки занесены в таблицу 1.
+
+
+
+\subsection{Измерение периода решеток по изображению, увеличенного с помощью линзы}
+
+Найдем период решетки другим способом.
+ 
+\begin{table}[h!]
+	\centering
+	\input{tables/table_3_436.tex}
+	\caption{Определение размера клеток $D$}
+	\label{tb3}
+\end{table}
+
+
+Измеренные расстояния: между сеткой и экраном - $a' = 131 \: cm \rightarrow$ между линзой и сеткой -  $a = a' - b = 6 \: cm$ , между линзой и экраном - $ b= 125\:cm$.
+
+\[    d = \frac{a}{b} \cdot D   \]
+
+Таким образом по формуле выше находим период решетки и записываем результат в таблицу 2. 
+
+
+\subsection{Исследование саморепродукции с помощью сеток}
+
+Исследуем саморепродукцию.
+Находим координаты $z_n$ плоскостей саморепродукции, строим график. По коэффициенту наклона прямой графика определим период решетки по формуле:
+
+\begin{equation}
+  d_i = \sqrt{\frac{k_i\lambda}{2}}
+\end{equation}
+
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_1_436.tex}
+	\caption{Измерение номера дифракционной картины от координаты линзы}
+	\label{tb1}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_1_436_res.tex}
+	\caption{Резульаты вычисления периода дифракционных решеток}
+	\label{tb2}
+\end{table}
+
+Измерения и полученные значения сводим в таблицу 3. 
+Затем строим графики $z = f(n)$.
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_1.png}
+  \caption{График $z_1 = f(n)$}
+  \label{}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_2.png}
+  \caption{График $z_2 = f(n)$}
+  \label{}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_3.png}
+  \caption{График $z_3 = f(n)$}
+  \label{}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{pics/lab_436_4.png}
+  \caption{График $z_4 = f(n)$}
+  \label{}
+\end{figure}
+
+
+\subsection{Исследование миры}
+
+Измеряем расстояние между экраном и линзой - $L_3$, экраном и мирой - $L_4$.
+Получаем, что $L_3 = 126 cm$, $L_4 = 132 cm$.
+
+Ширина штриха миры равна $1 mm$.
+
+
+
+
+\begin{table}[h!]
+	\centering
+	\input{tables/table_2_436.tex}
+	\caption{Исследование решеток миры}
+	\label{tb2_1}
+\end{table}
+
+\end{document}
