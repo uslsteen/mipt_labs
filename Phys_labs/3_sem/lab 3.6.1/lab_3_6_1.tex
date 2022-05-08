@@ -1,85 +1,9 @@
-\documentclass[a4paper, 14pt]{extarticle}%тип документа
-\date{}
-
-\usepackage{indentfirst}
-
-
-\usepackage{graphicx}
-\usepackage{cmap}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-
-%%\renewcommand{\footrulewidth}{ .0em }
-\usepackage[english,russian]{babel}
-\usepackage{multirow} % Слияние строк в таблице
-\newcommand
-{\un}[1]
-{\ensuremath{\text{#1}}}
-
-
-%Русский язык
-\usepackage[T2A]{fontenc} %кодировка
-\usepackage[utf8]{inputenc} %кодировка исходного кода
-\usepackage[english,russian]{babel} %локализация и переносы
-
-%Таблицы
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{booktabs}
-
-%Математика
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
-
-%отступы 
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
-
-%Вставка картинок
-\usepackage{graphicx}
-\usepackage{wrapfig, caption}
-\graphicspath{}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg, .jpeg}
-\newcommand\ECaption[1]{%
-     \captionsetup{font=footnotesize}%
-     \caption{#1}}
-
-%Графики
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.9}
-
-
-\usepackage[english,russian]{babel}
-\usepackage{multirow} % Слияние строк в таблице
-\newcommand
-{\un}[1]
-{\ensuremath{\text{#1}}}
-
-\begin{titlepage}
-	\begin{center}
-		\large 	Московский физико-технический университет \\
-		Физтех-школа радиотехники и компьютерных технологий\\
-		\vspace{0.2cm}
-		
-		\vspace{4.5cm}
-		Лабораторная работа № 3.6.1 \\ \vspace{0.2cm}
-		\LARGE \textbf{Спектральный анализ}
-	\end{center}
-	\vspace{2.3cm} \large
-	
-	\begin{center}
-		Работу выполнил: \\
-		Шурыгин Антон \\
-		Б01-909
-		
-	\end{center}
-	
-	\begin{center} \vspace{40mm}
-		г. Долгопрудный \\
-		2020 \\
-	\end{center}
-\end{titlepage}
-
+\input{include/preambule.tex}
 
 \begin{document}
-\maketitle
+
+\input{include/title.tex}
+
 \paragraph*{Цель работы:} изучение спектрального состава периодических электрических сигналов.
 	
 \paragraph*{Оборудование:} анализатор спектра, генератор прямоугольных импульсов, генератор сигналов специальной формы, осциллограф.
@@ -115,11 +39,11 @@
 		
 		\begin{figure}[h]
 			\begin{minipage}[h]{0.5\linewidth}
-				\center{\includegraphics[width=0.9\linewidth]{pictures/sp1.png}}
+				\center{\includegraphics[width=0.9\linewidth]{pics/sp1.png}}
 				\caption{Прямоугольные импульсы}
 			\end{minipage}
 			\begin{minipage}[h]{0.5\linewidth}
-				\center{\includegraphics[width=0.9\linewidth]{pictures/sp2.png}}
+				\center{\includegraphics[width=0.9\linewidth]{pics/sp2.png}}
 				\caption{Спектр последовательности прямоугольных импульсов}
 			\end{minipage}
 		\end{figure}
@@ -148,11 +72,11 @@
 	
 	\begin{figure}[h]
 		\begin{minipage}[h]{0.5\linewidth}
-			\center{\includegraphics[width=0.9\linewidth]{pictures/sp3.png}}
+			\center{\includegraphics[width=0.9\linewidth]{pics/sp3.png}}
 			\caption{Последовательность цугов}
 		\end{minipage}
 		\begin{minipage}[h]{0.5\linewidth}
-			\center{\includegraphics[width=0.9\linewidth]{pictures/sp4.png}}
+			\center{\includegraphics[width=0.9\linewidth]{pics/sp4.png}}
 			\caption{Спектр последовательности цугов}
 		\end{minipage}
 	\end{figure}
@@ -176,11 +100,11 @@
 		
 		\begin{figure}[h]
 			\begin{minipage}[h]{0.5\linewidth}
-				\center{\includegraphics[width=0.9\linewidth]{pictures/sp5.png}}
+				\center{\includegraphics[width=0.9\linewidth]{pics/sp5.png}}
 				\caption{Модулированные гармонические колебания}
 			\end{minipage}
 			\begin{minipage}[h]{0.5\linewidth}
-				\center{\includegraphics[width=0.9\linewidth]{pictures/sp6.png}}
+				\center{\includegraphics[width=0.9\linewidth]{pics/sp6.png}}
 				\caption{Спектр модулированных гармонических колебаний}
 			\end{minipage}
 		\end{figure}
@@ -201,7 +125,7 @@
 					
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=0.8\linewidth]{pictures/sp7.png}
+			\includegraphics[width=0.8\linewidth]{pics/sp7.png}
 			\caption{Cхема для исследования спектра периодической последовательности прямоугольных импульсов}
 			\label{A}
 		\end{figure}
@@ -213,7 +137,7 @@
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.8\linewidth]{pictures/sp8.png}
+			\includegraphics[width=0.8\linewidth]{pics/sp8.png}
 			\caption{Cхема для исследования спектра периодической последовательности цугов высокочастотных колебаний}
 			\label{B}
 		\end{figure}
@@ -226,7 +150,7 @@
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.8\linewidth]{pictures/sp9.png}
+			\includegraphics[width=0.8\linewidth]{pics/sp9.png}
 			\caption{Cхема для исследования спектра высокочастотного гармон. сигнала, промодулированного по амплитуде низкочастотным гармон. сигналом}
 			\label{C}
 		\end{figure}
@@ -246,7 +170,7 @@
   
   \begin{figure}[h]
   	\centering
-  	\includegraphics[width=0.65\linewidth]{pictures/A_or.jpg}
+  	\includegraphics[width=0.65\linewidth]{pics/A_or.jpg}
   	\caption{Спектр прямоугольных импульсов}
   	\label{A_or}
   \end{figure}
@@ -256,12 +180,12 @@
   Теперь проведем измерения зависимости ширины спектра от длительности импульсов, оставляя неизменным $ f_{повт} = 1 $ кГц. Результаты занесем в таблицу \ref{A_table}. Построим график зависимости $ \Delta \nu \left (\dfrac{1} {\tau} \right ) $. 
   \begin{figure}[h!]
   	\begin{minipage}[h]{0.5\linewidth}
-  		\center{\includegraphics[width=0.9\linewidth]{pictures/A_tau.jpg}}
+  		\center{\includegraphics[width=0.9\linewidth]{pics/A_tau.jpg}}
   		\caption{Спектр прямоугольных импульсов при $\tau$=50 мкс}
   		\label{A_tau}
   	\end{minipage}
   	\begin{minipage}[h]{0.5\linewidth}
-  		\center{\includegraphics[width=0.9\linewidth]{pictures/A_ff.jpg}}
+  		\center{\includegraphics[width=0.9\linewidth]{pics/A_ff.jpg}}
   		\caption{Спектр прямоугольных импульсов при $f_{повт}=2$ кГц}
   		\label{A_f}
   	\end{minipage}
@@ -293,7 +217,7 @@
   	
   	\begin{figure}[h!]
   		\label{A_graf}
-  		\includegraphics[scale=0.47]{lab361_v1.png}
+  		\includegraphics[scale=0.47]{pics/lab361_v1.png}
   		\caption{График зависимости $ \Delta \nu \left (\dfrac{1}{\tau} \right ) $. }
   	\end{figure}
   	
@@ -326,7 +250,7 @@
   	
   	 \begin{figure}[h]
   		\centering
-  		\includegraphics[width=0.65\linewidth]{pictures/B_25.jpg}
+  		\includegraphics[width=0.65\linewidth]{pics/B_25.jpg}
   		\caption{Спектр при частоте несущей $ \nu_0 = 25 $ кГц}
   		\label{B_25}
   	\end{figure}
@@ -363,7 +287,7 @@
   	
   	\begin{figure}[h!]
   		\label{B_graf}
-  		\includegraphics[scale=0.47]{lab361_2.png}
+  		\includegraphics[scale=0.47]{pics/lab361_2.png}
   		\caption{График зависимости расстояния между компонентами спектра $ \delta \nu $ от частоты повторения импульсов $ f_{повт} $}. 
   	\end{figure}
   	
@@ -391,12 +315,12 @@
   	
   	 \begin{figure}[h!]
   	\begin{minipage}[h]{0.5\linewidth}
-  		\center{\includegraphics[scale=0.15]{какая-то херня 2.jpg}}
+  		\center{\includegraphics[scale=0.15]{pics/какая-то херня 2.jpg}}
   		\caption{Измерение глубины модуляции, $mx = 0.5 \:  msec$}
   		\label{A_tau}
   	\end{minipage}
   	\begin{minipage}[h]{0.5\linewidth}
-  		\center{\includegraphics[scale=0.15]{какая-то херня 1.jpg}}
+  		\center{\includegraphics[scale=0.15]{pics/какая-то херня 1.jpg}}
   		\caption{Измерение глубины модуляции, $mx = 0.5 \:  msec$}
   		\label{A_f}
   	\end{minipage}
@@ -429,7 +353,7 @@
   	
   	\begin{figure}[h!]
   		\label{C_g}
-  		\includegraphics[scale=0.47]{lab361_v2.png}
+  		\includegraphics[scale=0.47]{pics/lab361_v2.png}
   		\caption{График зависимость отношения амплитуды боковой линии спектра к амплитуде основной линии $ \left( \frac{A_{main}}{A_{bok}}  \right ) $ от глубины модуляции $ m $}. 
   	\end{figure}
   	

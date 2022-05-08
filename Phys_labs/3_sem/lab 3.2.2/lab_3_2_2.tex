@@ -1,77 +1,8 @@
-\documentclass[a4paper, 14pt]{extarticle}%тип документа
-
-\date{}
-
-\usepackage{graphicx}
-\usepackage{cmap}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{indentfirst}
-
-%%\renewcommand{\footrulewidth}{ .0em }
-\usepackage[english,russian]{babel}
-\usepackage{multirow} % Слияние строк в таблице
-\newcommand
-{\un}[1]
-{\ensuremath{\text{#1}}}
-
-
-%Русский язык
-\usepackage[T2A]{fontenc} %кодировка
-\usepackage[utf8]{inputenc} %кодировка исходного кода
-\usepackage[english,russian]{babel} %локализация и переносы
-
-%Таблицы
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{booktabs}
-
-%Математика
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
-
-%отступы 
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
-
-%Вставка картинок
-\usepackage{graphicx}
-\usepackage{wrapfig, caption}
-\graphicspath{}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg, .jpeg}
-\newcommand\ECaption[1]{%
-     \captionsetup{font=footnotesize}%
-     \caption{#1}}
-
-%Графики
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.9}
-
+\input{include/preambule.tex}
 
 \begin{document}
 
-\begin{titlepage}
-	\begin{center}
-		\large 	Московский физико-технический университет \\
-		Физтех-школа радиотехники и компьютерных технологий\\
-		\vspace{0.2cm}
-		
-		\vspace{4.5cm}
-		Лабораторная работа № 1.2.3 \\ \vspace{0.2cm}
-		\LARGE \textbf{Резонанс напряжения в электрическом контуре}
-	\end{center}
-	\vspace{2.3cm} \large
-	
-	\begin{center}
-		Работу выполнил: \\
-		Шурыгин Антон \\
-		Б01-909
-
-	\end{center}
-	
-	\begin{center} \vspace{60mm}
-		г. Долгопрудный \\
-	\end{center}
-\end{titlepage}
-
-
+\input{include/title.tex}
 
 \paragraph*{Цель работы:} изучение последовательной цепи перемнного тока, наблюдение резонанса напряжений.
 \paragraph*{Оборудование:} регулировочный автотрансформатор, катушка иднуктивности с выдвижным сердечником, магазин емкостей, реостат, резистор, амперметр, три вольтметра, ваттметр, осциллограм, универсальный мост.
