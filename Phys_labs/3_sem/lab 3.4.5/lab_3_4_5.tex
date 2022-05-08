@@ -1,76 +1,8 @@
-\documentclass[a4paper, 14pt]{extarticle}
-
-\date{}
-
-\usepackage{graphicx}
-\usepackage{cmap}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{indentfirst}
-
-%%\renewcommand{\footrulewidth}{ .0em }
-\usepackage[english,russian]{babel}
-\usepackage{multirow} % Слияние строк в таблице
-\newcommand
-{\un}[1]
-{\ensuremath{\text{#1}}}
-
-
-%Русский язык
-\usepackage[T2A]{fontenc} %кодировка
-\usepackage[utf8]{inputenc} %кодировка исходного кода
-\usepackage[english,russian]{babel} %локализация и переносы
-
-%Таблицы
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{booktabs}
-
-%Математика
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
-
-%отступы 
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
-
-%Вставка картинок
-\usepackage{graphicx}
-\usepackage{wrapfig, caption}
-\graphicspath{}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg, .jpeg}
-\newcommand\ECaption[1]{%
-     \captionsetup{font=footnotesize}%
-     \caption{#1}}
-
-%Графики
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.9}
-
+\input{include/preambule.tex}
 
 \begin{document}
 
-\begin{titlepage}
-	\begin{center}
-		\large 	Московский физико-технический университет \\
-		Физтех-школа радиотехники и компьютерных технологий\\
-		\vspace{0.2cm}
-		
-		\vspace{4.5cm}
-		Лабораторная работа № 3.4.5 \\ \vspace{0.2cm}
-		\LARGE \textbf{Петля гистерезиса (динамичкский метод)}
-	\end{center}
-	\vspace{2.3cm} \large
-	
-	\begin{center}
-		Работу выполнил: \\
-		Шурыгин Антон \\
-		Б01-909
-
-	\end{center}
-	
-	\begin{center} \vspace{60mm}
-		г. Долгопрудный \\
-	\end{center}
-\end{titlepage}
-
+\input{include/title.tex}
 
 
 \section{Цель работы} Исследование петель гистерезиса ферромагнитных материалов с помощью осциллографа.
@@ -78,13 +10,15 @@
 \textbf{В работе используются:} \textit{понижающий трансформатор, реостат, амперметр и вольтметр (мультиметры), резистор, делитель напряжения, интегрирующая цепочка, электронный осциллограф, тороидальные образцы с двумя обмотками.}
 	
 \section{Теоретическая часть}		 
-	Магнитную индукцию удобно определять с помощью ЭДС, возникающей при изменении магнитного потока $\Phi$$ в катушке, намотанной на образец: $~~\Epsilon=-\frac{d\Phi}{dt}$.
+	Магнитную индукцию удобно определять с помощью ЭДС, возникающей при изменении магнитного потока $\phi$ в катушке, намотанной на образец:
+	
+	\[ \varepsilon= -\frac{d\phi}{dt} \]
 	
 	Пусть катушка плотно обхватывает образец, и индукция $\textbf{B}$
 	в образце однородна. Тогда $\Phi=BSN$, где $N$ - число витков в измерительной катушке, а $S$ -- число витков.
-	Подставим $\Phi$ в формулу ЭДС, после интегрирования найдем:
+	Подставим $\phi$ в формулу ЭДС, после интегрирования найдем:
 
-	\[ |B|=\frac{1}{SN}\int E dt \]
+	\[ |B|=\frac{1}{SN}\int \varepsilon dt \]
 	
 	Таким образом, для определения $B$ нужно проинтегрировать сигнал, наведенный меняющимся магнитным полем на измерительную катушку, намотанную на образец.
 	
