@@ -12,7 +12,7 @@
 
 ## 3_sem
 
-- [lab 3.4.5](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.4.5), [lab 3.5.1](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.5.1), [lab 3.6.1](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.6.1) have some compilation issues due to initial writing in overleaf. 
+- [lab 3.5.1](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.5.1), [lab 3.6.1](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.6.1) have some compilation issues due to initial writing in overleaf. 
 - Honestly, the [lab 3.6.1](https://github.com/uslsteen/mipt_labs/tree/master/Phys_labs/3_sem/lab%203.6.1) was made with God's help, so its quality is not the best
 
 
